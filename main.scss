@@ -1,0 +1,90 @@
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+
+$Soft-violet: hsl(273, 75%, 66%);
+$Soft-blue: hsl(240, 73%, 65%);
+$Very-dark-grayish-blue: hsl(237, 12%, 33%);
+$Dark-grayish-blue: hsl(240, 6%, 50%);
+$Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$Soft-red: hsl(14, 88%, 65%);
+$Light-grayish-blue: hsl(240, 5%, 91%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+span,
+p {
+  font-family: "Kumbh Sabs", sans-serif;
+}
+
+span,
+p {
+  font-size: 12px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient($Soft-violet, $Soft-blue);
+}
+
+.accordion-card-container {
+  display: flex;
+  flex-direction: row;
+  // flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  background-color: white;
+  background-image: url("images/bg-pattern-desktop.svg"),url("images/illustration-box-desktop.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.accordion-card-content {
+  ul {
+    list-style: none;
+    li {
+      padding: 20px 0 20px 0;
+      border-bottom: 1px solid $Light-grayish-blue;
+      p {
+        color: $Dark-grayish-blue;
+        max-height: 0;
+        visibility: hidden;
+      transition: 0.25s;
+      }
+    }
+    div {
+      :hover {
+        cursor: pointer;
+        color: $Soft-red;
+      }
+      span {
+        color: $Very-dark-desaturated-blue;
+      }
+      img {
+        float: right;
+      }
+    }
+  }
+  
+  .active {
+    span {
+      font-weight: 700;
+    }
+    img {
+      transform: scaleY(-1);
+    }
+    p {
+      visibility: visible;
+      max-height: 100vh;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+span,
+p {
+  font-family: "Kumbh Sabs", sans-serif;
+}
+
+span,
+p {
+  font-size: 12px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+.accordion-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 900px;
+  background-color: white;
+  background-image: url("images/bg-pattern-desktop.svg"), url("images/illustration-box-desktop.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.accordion-card-content ul {
+  list-style: none;
+}
+
+.accordion-card-content ul li {
+  padding: 20px 0 20px 0;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.accordion-card-content ul li p {
+  color: #787887;
+  max-height: 0;
+  visibility: hidden;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.accordion-card-content ul div :hover {
+  cursor: pointer;
+  color: #f47c57;
+}
+
+.accordion-card-content ul div span {
+  color: #1d1e35;
+}
+
+.accordion-card-content ul div img {
+  float: right;
+}
+
+.accordion-card-content .active span {
+  font-weight: 700;
+}
+
+.accordion-card-content .active img {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.accordion-card-content .active p {
+  visibility: visible;
+  max-height: 100vh;
+}
+/*# sourceMappingURL=main.css.map */
